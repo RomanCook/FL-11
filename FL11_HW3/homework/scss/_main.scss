@@ -1,0 +1,103 @@
+@mixin btn-style {
+    color: white;
+    background: $btn-background;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 3px;
+}
+body {
+    margin: 0 auto;
+    width: 960px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.header {
+    background-image: $header-background-url;
+    background-size: cover;
+    color: map-get($map: $font-colors, $key: header-color-font);
+}
+.header-wrap {
+    margin-left: 100px;
+}
+.landing-logo {
+    padding-top: 20px;
+    display: flex;
+    p {
+    font-weight: bold;
+    letter-spacing: 3px;
+    }
+}
+.header_heading {
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    padding-right: 400px;
+}
+.header_text {
+    font-size: 12px;
+    padding-right: 400px;
+}
+.header_button {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    @include btn-style();
+}
+.section {
+    background-color: $section-background;
+}
+.section_text {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: map-get($map: $font-colors, $key: welcome-color);
+}
+.section_card_wrap {
+    display: flex;
+    color: white;
+    padding: 10px;
+    max-width: 777px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.section_card {
+    text-align: center;
+    background-color: rgb(31, 29, 29);
+    @extend .section_card_img;
+}
+.section_card_img {
+    border-radius: 5px;
+    margin: 5px;
+}
+.section_card_heading {
+    font-weight: bold;
+}
+.section_card_text {
+    font-size: 10px;
+}
+.section_banner {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background: $banner-background;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.section_banner_heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: map-get($map: $font-colors, $key: banner-heading);
+}
+.section_banner_text {
+    color: white;
+}
+.section_banner_button {
+    @include btn-style();
+}
+.footer {
+    background-color: black;
+    color: white;
+}
+.footer-wrap {
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+}

@@ -120,6 +120,13 @@
   main {
     flex-direction: column;
   }
+  .date-center{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .postitems h2 {
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -128,5 +135,12 @@
   }
   aside {
     display: none;
+  }
+  .date-center{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .postitems h2 {
+    padding-bottom: 10px;
   }
 }

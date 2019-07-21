@@ -8,8 +8,7 @@ function Fighter(name, damage, hp, agility, combatWins, combatLosses){
         Losses: combatLosses
     },
     this.getName = function(){
-            let name = this.name;
-            console.log(name);
+            console.log(this.name);
         },
         this.getDamage = function(){
             let damage = this.damage;
@@ -24,13 +23,19 @@ function Fighter(name, damage, hp, agility, combatWins, combatLosses){
             console.log(helth);
         },
         this.attack = function(defender){
-            
+            let sto = 100;
+            if(Math.ceil(Math.random() * sto) > defender.hp){
+                defender.hp -= this.damage;
+            } else {
+                console.log(`${defender.name} attak missed`);
+            }
         },
         this.logCombatHistory = function(){
             console.log(`Name: ${this.getName}, ${this.combatHistory}`)
         },
         this.heal = function(a){
-            if(this.hp + a > 100){
+            let sto = 100;
+            if(this.hp + a > sto){
                 this.hp += a;
             }
         },

@@ -14,23 +14,24 @@ function Fighter(name, damage, hp, agility, combatWins, combatLosses){
       console.log(this.damage);
     },
     Fighter.prototype.getAgility = function(){
-      let agility = this.agility;
-      console.log(agility);
+      console.log(this.agility);
     },
     Fighter.prototype.getHelth = function(){
-      let helth = this.hp;
-      console.log(helth);
+      console.log(this.hp);
     },
     Fighter.prototype.attack = function(defender){
       let sto = 100;
       if(Math.ceil(Math.random() * sto) > defender.hp ){
         defender.hp -= this.damage;
+        this.combatWins = this.addWin;
+        defender.Losses = defender.addLoss;
+        console.log(`${this.name} make ${this.damage} damage to ${defender.name}`);
       } else {
         console.log(`${defender.name} attak missed`);
       }
     },
     Fighter.prototype.logCombatHistory = function(){
-      console.log(`Name: ${this.getName}, ${this.combatHistory}`)
+      console.log(`Name: ${this.name}, ${this.CombatHistory}`)
     },
     Fighter.prototype.heal = function(a){
       let sto = 100;
@@ -46,9 +47,9 @@ function Fighter(name, damage, hp, agility, combatWins, combatLosses){
         }
     },
     Fighter.prototype.addWin = function(){
-        this.Wins ++;
+        this.Wins = this.Wins + 1;
     },
     Fighter.prototype.addLoss = function(){
-        this.Losses ++;
+        this.Losses = this.Losses + 1;
     }
 }
